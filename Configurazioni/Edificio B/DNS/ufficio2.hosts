@@ -1,0 +1,24 @@
+$ttl 86400
+ @    IN    SOA   pompelmo.BrunelloCucinelli.it admin.BrunelloCucinelli.it   //la chiocciola indica che mi riferisco al dominio che sto definendo
+ {                                //dopo SOA scrivo il nome del server master del dominio
+    2014051701 ; Serial    // anno-mese-giorno-numero. codice usato dai secondary server per vedere se file aggiornato
+    86400      ; Refresh   //tempo che un secondary server dever attendere per consultare il SOA del primary
+    3600       ; Retry    //temppo che deve aspettare un secondary per rifare la richiesta se ha fallito
+    604800     ; Expire   //indica quanto a lungo un secondary deve conservare i file di zone senza ricevere un refresh
+    86400      ; Minimum  //tempo di vita di tutti i record del dominio dove non è espresso (il ttl )
+ }
+
+;definizione name server e server di mail
+
+IN NS pesca.BrunelloCucinelli.it    //indico i name server presenti nella mia rete
+IN NS pompelmo.BrunelloCucinelli.it  
+IN MX 10 mail.BrunelloCucinelli.it  //indico che mail è il server di posta del dominio. il 10 è solo un valore di preferenza
+
+
+;definizione host presenti in ufficio2 (Edificio B primo piano)
+
+cetriolo  	IN    A    192.168.45.1                     # Router
+host_01     IN    A    192.168.45.2                     # Host 01
+host_02    	IN    A    192.168.45.3                     # Host 02
+…
+host_128    IN    A    192.168.45.130      	         	# Host 128

@@ -1,0 +1,27 @@
+
+@    IN    SOA    dns.pesca.BrunelloCucinelli.it BrunelloCucinelli.it
+{
+    2014052002          ;serial
+    36000               ;refresh every 100 hours
+    3600                ;retry after 1 hour
+    3600000             ;expire after 1000 hours
+    36000               ;default ttl is 100 hours
+}
+
+; Definizione dei nameserver e dei server di mail
+		IN    NS    pesca.BrunelloCucinelli.it
+		IN    NS    pompelmo.BrunelloCucinelli.it
+		IN 	  NS 	8.8.8.8
+		IN    MX    mail.BrunelloCucinelli.it
+		
+; Sottodomini in BrunelloCucinelli.it
+DMZ		IN	A      148.223.44.0
+
+
+;host in BrunelloCucinelli.it  
+cavolo  IN      A	148.223.44.18
+www		IN		CNAME	cavolo
+pesca   IN      A 	148.223.44.16
+dns 	IN		CNAME	pesca
+
+

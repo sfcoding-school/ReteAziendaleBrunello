@@ -1,0 +1,40 @@
+# IFCONFIG.CF
+# configurazione Interfacce Di Rete
+
+#-------------- MAGAZZINO (EDIFICIO E)
+
+ifconfig eth0 192.168.6.3 netmask 255.255.255.0 broadcast 192.168.6.255   #Interfaccia da "Cetriolo" Edificio B
+ifconfig eth1 192.168.7.2 netmask 255.255.255.0 broadcast 192.168.7.255   #Interfaccia da "Patata" Edificio D
+ifconfig eth4 192.168.51.1 netmask 255.255.255.0 broadcast 192.168.51.255 # Interfaccia verso la rete interna Spedizioni (Piano Terra)
+ifconfig eth5 192.168.52.1 netmask 255.255.255.0 broadcast 192.168.52.255 # Interfaccia verso la rete interna Controllo Merci (Primo Piano)
+ifconfig eth6 192.168.53.1 netmask 255.255.255.0 broadcast 192.168.53.255 # Interfaccia verso la rete interna Amministrazione spedizioni(Secondo Piano)
+
+
+#---- SOTTORETE SPEDIZIONI (PIANO TERRA) ----
+
+ifconfig eth0 192.168.51.2 netmask 255.255.255.0 broadcast 192.168.40.255 #Host_01
+ifconfig eth0 192.168.51.3 netmask 255.255.255.0 broadcast 192.168.40.255 #Host_02
+.
+.
+.
+ifconfig eth0 192.168.51.37 netmask 255.255.255.0 broadcast 192.168.40.255 #Host_35
+
+
+#---- SOTTORETE CONTROLLO MERCI (PRIMO PIANO) ----
+
+ifconfig eth0 192.168.52.2 netmask 255.255.255.0 broadcast 192.168.41.255 #Host_01
+ifconfig eth0 192.168.52.3 netmask 255.255.255.0 broadcast 192.168.41.255 #Host_02
+.
+.
+.
+ifconfig eth0 192.168.52.32 netmask 255.255.255.0 broadcast 192.168.41.255 #Host_30
+
+
+#---- SOTTORETE AMMINISTRAZIONE'(SECONDO PIANO) ----
+
+ifconfig eth0 192.168.53.2 netmask 255.255.255.0 broadcast 192.168.42.255 #Host_01
+ifconfig eth0 192.168.53.3 netmask 255.255.255.0 broadcast 192.168.42.255 #Host_02
+.
+.
+.
+ifconfig eth0 192.168.53.32 netmask 255.255.255.0 broadcast 192.168.42.255 #Host_30

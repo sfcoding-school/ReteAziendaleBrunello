@@ -1,0 +1,38 @@
+# IFCONFIG.CF
+# configurazione Interfacce Di Rete
+
+#-------------- NEGOZIO (EDIFICIO D)
+
+ifconfig eth0 192.168.8.1 netmask 255.255.255.0 broadcast 192.168.8.255   #Interfaccia da "Melanzana" Edificio C
+ifconfig eth1 192.168.9.1 netmask 255.255.255.0 broadcast 192.168.9.255   #Interfaccia da "Cetriolo" Edificio B
+ifconfig eth2 192.168.10.1 netmask 255.255.255.0 broadcast 192.168.10.255   #Interfaccia da "Carciofo" Edificio E
+ifconfig eth3 192.168.48.1 netmask 255.255.255.0 broadcast 192.168.48.255 # Interfaccia verso la rete interna Cassa (Piano Terra)
+ifconfig eth4 192.168.49.1 netmask 255.255.255.0 broadcast 192.168.49.255 # Interfaccia verso la rete interna Showroom 1 (Primo Piano)
+ifconfig eth5 192.168.50.1 netmask 255.255.255.0 broadcast 192.168.50.255 # Interfaccia verso la rete interna Showroom 2 (Secondo Piano)
+
+
+#---- SOTTORETE CASSA (PIANO TERRA) ----
+
+ifconfig eth0 192.168.48.2 netmask 255.255.255.0 broadcast 192.168.48.255 #Host_01
+ifconfig eth0 192.168.48.3 netmask 255.255.255.0 broadcast 192.168.48.255 #Host_02
+ifconfig eth0 192.168.48.4 netmask 255.255.255.0 broadcast 192.168.48.255 #Server DHCP
+
+
+#---- SOTTORETE SHOWROOM 1 (PRIMO PIANO) ----
+
+ifconfig eth0 192.168.49.2 netmask 255.255.255.0 broadcast 192.168.49.255 #Host_01
+ifconfig eth0 192.168.49.3 netmask 255.255.255.0 broadcast 192.168.49.255 #Host_02
+.
+.
+.
+ifconfig eth0 192.168.49.130 netmask 255.255.255.0 broadcast 192.168.49.255 #Host_128
+
+
+#---- SOTTORETE SHOWROOM 2 (SECONDO PIANO) ----
+
+ifconfig eth0 192.168.50.2 netmask 255.255.255.0 broadcast 192.168.50.255 #Host_01
+ifconfig eth0 192.168.50.3 netmask 255.255.255.0 broadcast 192.168.50.255 #Host_02
+.
+.
+.
+ifconfig eth0 192.168.50.72 netmask 255.255.255.0 broadcast 192.168.50.255 #Host_70

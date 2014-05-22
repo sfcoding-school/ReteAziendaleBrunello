@@ -1,0 +1,10 @@
+#ALIAS
+
+#alias amministratori
+
+amministratore_rete: andrea@BrunelloCucinelli.it
+amministratore_sicurezza: federico@BrunelloCucinelli.it
+
+#mailing list
+
+admin: andrea@BrunelloCucinelli.it, federico@BrunelloCucinelli.it

@@ -1,0 +1,51 @@
+# IFCONFIG.CF
+# configurazione Interfacce Di Rete
+
+#-------------- SMISTAMENTO (EDIFICIO B)
+
+ifconfig eth0 192.168.2.2 netmask 255.255.255.0 broadcast 192.168.2.255   #Interfaccia da "Pomodoro" Edificio A
+ifconfig eth1 192.168.3.2 netmask 255.255.255.0 broadcast 192.168.3.255   #Interfaccia da "Melanzana" Edificio C
+ifconfig eth2 192.168.5.1 netmask 255.255.255.0 broadcast 192.168.5.255   #Interfaccia da "Patata" Edificio D
+ifconfig eth3 192.168.6.2 netmask 255.255.255.0 broadcast 192.168.6.255   #Interfaccia da "Carciofo" Edificio E
+ifconfig eth4 192.168.43.1 netmask 255.255.255.0 broadcast 192.168.43.255 # Interfaccia verso la rete interna Reparto Servizi (Piano Terra)
+ifconfig eth5 192.168.44.1 netmask 255.255.255.0 broadcast 192.168.44.255 # Interfaccia verso la rete interna Ufficio 1 (Piano Terra)
+ifconfig eth6 192.168.45.1 netmask 255.255.255.0 broadcast 192.168.45.255 # Interfaccia verso la rete interna Ufficio 2 (Primo Piano)
+ifconfig eth7 192.168.46.1 netmask 255.255.255.0 broadcast 192.168.46.255 # Interfaccia verso la rete interna Ufficio 3 (Secondo Piano)
+
+
+#---- SOTTORETE REPARTO SERVIZI (PIANO TERRA) ----
+
+ifconfig eth0 192.168.43.2 netmask 255.255.255.0 broadcast 192.168.43.255 #DNS
+ifconfig eth0 192.168.43.3 netmask 255.255.255.0 broadcast 192.168.43.255 #SERVER AZIENDALE
+
+
+#---- SOTTORETE UFFICIO 1 (PIANO TERRA) ----
+
+ifconfig eth0 192.168.44.2 netmask 255.255.255.0 broadcast 192.168.44.255 #Host_01
+ifconfig eth0 192.168.44.3 netmask 255.255.255.0 broadcast 192.168.44.255 #Host_02
+.
+.
+.
+ifconfig eth0 192.168.44.46 netmask 255.255.255.0 broadcast 192.168.44.255 #Host_44
+
+
+#---- SOTTORETE UFFICIO 2(PRIMO PIANO) ----
+
+ifconfig eth0 192.168.45.2 netmask 255.255.255.0 broadcast 192.168.45.255 #Host_01
+ifconfig eth0 192.168.45.3 netmask 255.255.255.0 broadcast 192.168.45.255 #Host_02
+.
+.
+.
+ifconfig eth0 192.168.45.130 netmask 255.255.255.0 broadcast 192.168.45.255 #Host_128
+
+
+#---- SOTTORETE UFFICIO 3(SECONDO PIANO) ----
+
+ifconfig eth0 192.168.46.2 netmask 255.255.255.0 broadcast 192.168.46.255 #Host_01
+ifconfig eth0 192.168.46.3 netmask 255.255.255.0 broadcast 192.168.46.255 #Host_02
+.
+.
+.
+ifconfig eth0 192.168.46.130 netmask 255.255.255.0 broadcast 192.168.46.255 #Host_128
+
+

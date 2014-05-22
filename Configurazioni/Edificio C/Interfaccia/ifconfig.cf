@@ -1,0 +1,67 @@
+# IFCONFIG.CF
+# Configurazione Interfaccia di Rete
+#-------------- Amministrazione (EDIFICIO C)
+
+# EXTERIOR ROUTER - FIREWALL:"carota"
+
+ifconfig eht0 148.223.44.14 netmask 255.255.255.0 broadcast 148.223.44.255		# Interfaccia verso Internet
+ifconfig eht1 148.223.44.15 netmask 255.255.255.0 broadcast 148.223.44.255		# Interfaccia verso DMZ
+
+# INTERIOR ROUTER - FIREWALL:"melanzana"
+
+ifconfig eth0 192.168.1.1 netmask 255.255.255.0 broadcast 192.168.1.255	   # Interfaccia verso router "Pomodoro" dell' edificio A
+ifconfig eth1 192.168.2.1 netmask 255.255.255.0 broadcast 192.168.2.255	   # Interfaccia verso router "Cetriolo" dell' edificio B
+ifconfig eth2 192.168.7.1 netmask 255.255.255.0 broadcast 192.168.7.255	   # Interfaccia verso router "Patata" dell' edificio D
+ifconfig eth3 148.223.44.20 netmask 255.255.255.0 broadcast 148.223.44.255 # Interfaccia verso la DMZ
+ifconfig eth4 192.168.40.1 netmask 255.255.255.0 broadcast 192.168.40.255  # Interfaccia verso la rete interna Ufficio Tecnico (Piano Terra)
+ifconfig eth5 192.168.41.1 netmask 255.255.255.0 broadcast 192.168.41.255  # Interfaccia verso la rete interna Amministrazione (Primo Piano)
+ifconfig eth6 192.168.42.1 netmask 255.255.255.0 broadcast 192.168.42.255  # Interfaccia verso la rete interna Contabilità (Secondo Piano)
+
+#---- SERVER DMZ ----
+
+#---- Server DNS "pesca"--
+
+ifconfig eth0 148.223.44.16 netmask 255.255.255.0 broadcast 148.223.44.255
+
+#---- Server POSTA ELETTRONICA "mail"--
+
+ifconfig eth0 148.223.44.17 netmask 255.255.255.0 broadcast 148.223.44.255
+
+#---- Server WEB " cavolo" --
+
+ifconfig eth0 148.223.44.18 netmask 255.255.255.0 broadcast 148.223.44.255
+
+#---- Server PROXY "cipolla"--
+
+ifconfig eth0 148.223.44.19 netmask 255.255.255.0 broadcast 148.223.44.255
+
+
+
+#---- SOTTORETE UFFICIO TECNICO (PIANO TERRA) ----
+
+ifconfig eth0 192.168.40.3 netmask 255.255.255.0 broadcast 192.168.40.255 #Host_01
+ifconfig eth0 192.168.40.4 netmask 255.255.255.0 broadcast 192.168.40.255 #Host_02
+.
+.
+.
+ifconfig eth0 192.168.40.13 netmask 255.255.255.0 broadcast 192.168.40.255 #Host_10
+
+
+#---- SOTTORETE AMMINISTRAZIONE (PRIMO PIANO) ----
+
+ifconfig eth0 192.168.41.2 netmask 255.255.255.0 broadcast 192.168.41.255 #Host_01
+ifconfig eth0 192.168.41.3 netmask 255.255.255.0 broadcast 192.168.41.255 #Host_02
+.
+.
+.
+ifconfig eth0 192.168.41.22 netmask 255.255.255.0 broadcast 192.168.41.255 #Host_20
+
+
+#---- SOTTORETE CONTABILITA'(SECONDO PIANO) ----
+
+ifconfig eth0 192.168.42.2 netmask 255.255.255.0 broadcast 192.168.42.255 #Host_01
+ifconfig eth0 192.168.42.3 netmask 255.255.255.0 broadcast 192.168.42.255 #Host_02
+.
+.
+.
+ifconfig eth0 192.168.42.22 netmask 255.255.255.0 broadcast 192.168.42.255 #Host_20

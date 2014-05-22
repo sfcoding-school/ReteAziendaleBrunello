@@ -1,0 +1,23 @@
+# IFCONFIG.CF
+# configurazione Interfacce Di Rete
+
+#-------------- Edificio Backup e Manutenzione (EDIFICIO A)
+
+# INTERIOR ROUTER - FIREWALL:"Pomodoro"
+
+ifconfig eth0 192.168.6.1 netmask 255.255.255.0 broadcast 192.168.6.255   #Interfaccia da "Cetriolo" Edificio B
+ifconfig eth1 192.168.4.1 netmask 255.255.255.0 broadcast 192.168.4.255   #Interfaccia da "Melanzana" Edificio C
+ifconfig eth2 192.168.47.1 netmask 255.255.255.0 broadcast 192.168.47.255 # Interfaccia verso la rete interna Reparto Manutenzione (Piano Terra)
+
+#---- SOTTORETE REPARTO MANUTENZIONE (PIANO TERRA) ----
+
+ifconfig eth0 192.168.47.2 netmask 255.255.255.0 broadcast 192.168.44.255 #Host_01
+ifconfig eth0 192.168.47.3 netmask 255.255.255.0 broadcast 192.168.44.255 #Host_02
+.
+.
+.
+ifconfig eth0 192.168.47.52 netmask 255.255.255.0 broadcast 192.168.44.255 #Host_50
+
+#---- Server Backup "mela" 
+ifconfig eth0 192.168.47.53 netmask 255.255.255.0 broadcast 192.168.47.255 #Server Backup
+

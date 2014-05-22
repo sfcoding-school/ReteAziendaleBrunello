@@ -1,0 +1,34 @@
+$ttl 86400
+ @    IN    SOA   pesca.BrunelloCucinelli.it admin.BrunelloCucinelli.it   //la chiocciola indica che mi riferisco al dominio che sto definendo
+ {                                //dopo SOA scrivo il nome del server master del dominio
+    2014051701 ; Serial    // anno-mese-giorno-numero. codice usato dai secondary server per vedere se file aggiornato
+    86400      ; Refresh   //tempo che un secondary server dever attendere per consultare il SOA del primary
+    3600       ; Retry    //temppo che deve aspettare un secondary per rifare la richiesta se ha fallito
+    604800     ; Expire   //indica quanto a lungo un secondary deve conservare i file di zone senza ricevere un refresh
+    86400      ; Minimum  //tempo di vita di tutti i record del dominio dove non è espresso (il ttl )
+ }
+
+;definizione name server e server di mail
+
+		IN NS pesca.BrunelloCucinelli.it    //indico i name server presenti nella mia rete
+		IN NS pompelmo.BrunelloCucinelli.it
+		IN MX 10 mail.BrunelloCucinelli.it
+
+//Definizione del server MAIL 
+17 IN MX mail.DMZ.BrunelloCucinelli.it.
+
+//Definizione del server DNS 
+16 IN PTR pesca.DMZ.BrunelloCucinelli.it.
+
+//Definizione del server PROXY
+19 IN PTR cipolla.DMZ.BrunelloCucinelli.it
+
+//Definizione del server WEB;
+18 IN PTR cavolo.DMZ.BrunelloCucinelli.it.
+
+//Definizione interior router
+20 IN PTR melanzana.DMZ.BrunelloCucinelli.it.
+
+//Definizione interior router
+15 IN PTR carota.DMZ.BrunelloCucinelli.it.
+

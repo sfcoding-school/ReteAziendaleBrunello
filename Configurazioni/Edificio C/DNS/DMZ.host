@@ -1,0 +1,40 @@
+
+@    IN    SOA    pesca.BrunelloCucinelli.it BrunelloCucinelli.it
+{
+    2014052002          ;serial
+    36000               ;refresh every 100 hours
+    3600                ;retry after 1 hour
+    3600000             ;expire after 1000 hours
+    36000               ;default ttl is 100 hours
+}
+
+; Definizione dei nameserver e dei server di mail
+		IN    NS    pesca.BrunelloCucinelli.it
+		IN    NS    pompelmo.BrunelloCucinelli.it
+		IN    MX    mail.BrunelloCucinelli.it
+		
+                                  
+; host in BrunelloCucinelli.it
+# Exterior Router---
+
+carota	IN	A	148.223.44.15
+
+# Interior Router---
+
+melanzana	IN	A	148.223.44.20
+
+# SERVER DNS---
+
+pesca   IN    A    148.223.44.16
+
+# SERVER WEB---
+
+cavolo   IN    A    148.223.44.18
+
+# SERVER POSTA ELETTRONICA---
+
+mail   IN    A    148.223.44.17
+
+# SERVER PROXY---
+
+cipolla   IN    A    148.223.44.19

@@ -1,0 +1,35 @@
+$ttl 86400
+ @    IN    SOA   pompelmo.BrunelloCucinelli.it root.BrunelloCucinelli.it.   //la chiocciola indica che mi riferisco al dominio che sto definendo
+ {                                //dopo SOA scrivo il nome del server master del dominio
+    2014051701 ; Serial    // anno-mese-giorno-numero. codice usato dai secondary server per vedere se file aggiornato
+    86400      ; Refresh   //tempo che un secondary server dever attendere per consultare il SOA del primary
+    3600       ; Retry    //temppo che deve aspettare un secondary per rifare la richiesta se ha fallito
+    604800     ; Expire   //indica quanto a lungo un secondary deve conservare i file di zone senza ricevere un refresh
+    86400      ; Minimum  //tempo di vita di tutti i record del dominio dove non è espresso (il ttl )
+ }
+;definizione name server e server di mail
+
+IN NS pesca.BrunelloCucinelli.it    //indico i name server presenti nella mia rete
+IN NS pompelmo.BrunelloCucinelli.it  
+IN MX 10 mail.BrunelloCucinelli.it  //indico che mail è il server di posta del dominio. il 10 è solo un valore di preferenza
+
+; Sottodomini in BrunelloCucinelli.it
+0.47		IN	PTR		manutezione.BrunelloCucinelli.it.    
+0.43		IN	PTR		servizi.BrunelloCucinelli.it.   
+0.44		IN	PTR		ufficio1.BrunelloCucinelli.it.    
+0.45		IN	PTR		ufficio2.BrunelloCucinelli.it.  
+0.46		IN	PTR		ufficio3.BrunelloCucinelli.it.       
+0.40		IN	PTR		tecnici.BrunelloCucinelli.it.    
+0.41		IN	PTR		amministrazione.BrunelloCucinelli.it.    
+0.42		IN	PTR		contabilità.BrunelloCucinelli.it.
+0.48		IN	PTR		cassa.BrunelloCucinelli.it.    
+0.49		IN	PTR		showroom1.BrunelloCucinelli.it.    
+0.50		IN	PTR		showroom2.BrunelloCucinelli.it.
+0.51		IN	PTR		spedizioni.BrunelloCucinelli.it.    
+0.52		IN	PTR		merci.BrunelloCucinelli.it.    
+0.53		IN	PTR		admspedizioni.BrunelloCucinelli.it.
+
+
+
+
+
