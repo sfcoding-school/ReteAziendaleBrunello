@@ -1,5 +1,4 @@
 #Progettazione Rete Aziendale Brunello
-###Overview
 
 ## **NB:** Il progetto è da considerarsi didattico e non ha alcun legame reale con l'azienda in esame.
 
