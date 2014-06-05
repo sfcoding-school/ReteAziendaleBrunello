@@ -1,6 +1,3 @@
-
-<!-- saved from url=(0041)ftp://ftp.internic.net/domain/named.cache -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;">;       This file holds the information on root name servers needed to
 ;       initialize cache of Internet domain name servers
 ;       (e.g. reference this file in the "cache  .  &lt;file&gt;"
 ;       configuration file of BIND domain name servers).
@@ -88,4 +85,3 @@ L.ROOT-SERVERS.NET.      3600000      AAAA  2001:500:3::42
 M.ROOT-SERVERS.NET.      3600000      A     202.12.27.33
 M.ROOT-SERVERS.NET.      3600000      AAAA  2001:DC3::35
 ; End of File
-</pre></body></html>
