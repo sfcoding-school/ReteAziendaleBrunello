@@ -7,4 +7,4 @@ $ORIGIN BrunelloCucinelli.it
                                         1W              ; expiry
                                         1D )            ; minimum
                         1D IN NS        @
-                        1D IN A         127.0.0.
+                        1D IN A         127.0.0.1
